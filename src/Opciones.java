@@ -14,7 +14,7 @@ public class Opciones {
             public void actionPerformed(ActionEvent e) {
                 JFrame jp = new JFrame();
                 jp.setContentPane(new Ingresar().ingresar);
-                jp.setSize(200,200);
+                jp.setSize(350,500);
                 jp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 jp.setVisible(true);
                 ((JFrame)SwingUtilities.getWindowAncestor(ingresarEstudianteButton)).dispose();
@@ -26,7 +26,7 @@ public class Opciones {
             public void actionPerformed(ActionEvent e) {
                 JFrame jp = new JFrame();
                 jp.setContentPane(new Mostrar().mostrar);
-                jp.setSize(200,200);
+                jp.setSize(350,500);
                 jp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 jp.setVisible(true);
                 ((JFrame)SwingUtilities.getWindowAncestor(mostrarEstudianteButton)).dispose();

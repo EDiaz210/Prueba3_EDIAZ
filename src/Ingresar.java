@@ -15,6 +15,7 @@ public class Ingresar {
     private JTextField textField8;
     private JButton ingresarButton;
     private JButton volverButton;
+    private double pro;
 
     public Ingresar() {
         ingresarButton.addActionListener(new ActionListener() {
@@ -25,7 +26,7 @@ public class Ingresar {
                 String password = "mSz7kMRF9HW1Mje7FxZU";
 
 
-                String query = "INSERT INTO estudiantes (id, cedula, nombre, estudiante1, estudiante2, estudiante3, estudiante4, estudiante5  ) VALUES (?, ?, ?, ?, ?,?,?,?)";
+                String query = "INSERT INTO estudiantes (id, cedula, nombre, estudiante1, estudiante2, estudiante3, estudiante4, estudiante5, promedio  ) VALUES (?, ?, ?, ?, ?,?,?,?,?)";
 
 
                 String id = textField1.getText().trim();
@@ -51,7 +52,10 @@ public class Ingresar {
                     cadenaPreparada.setDouble(6, estudiante3);
                     cadenaPreparada.setDouble(7, estudiante4);
                     cadenaPreparada.setDouble(8, estudiante5);
-                    double pro = (estudiante1 + estudiante3 + estudiante2 + estudiante4 + estudiante5)/5;
+
+
+                    pro = (estudiante1 + estudiante3 + estudiante2 + estudiante4 + estudiante5)/5;
+
                     cadenaPreparada.setDouble(9,pro);
                     cadenaPreparada.executeUpdate();
 
